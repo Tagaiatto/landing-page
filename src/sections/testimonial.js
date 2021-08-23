@@ -111,7 +111,7 @@ export default function TestimonialCard() {
      <Box sx={styles.carouselWrapper}>
        <Carousel {...carouselParams}>
         {data.map((item) => (
-          <Box sx={styles.reviewCard} key={item.sliderClass}>
+          <Box sx={styles.reviewCard} key={item.id}>
             <Rating rating={item.review} />
             <Heading as="h3" sx={styles.title}>
               {item.title}
@@ -156,7 +156,7 @@ const styles = {
         null,
         'calc(50% + 865px)',
       ],
-      mr: ['auto', null, null, null, null, null, null, '-220px'],
+      mr: ['auto', null, null, null, null, null, null, 'auto'],
       ml: 'auto',
       '.react-multi-carousel-item': {
         transition: 'all 0.25s',
